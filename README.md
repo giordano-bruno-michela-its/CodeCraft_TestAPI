@@ -33,3 +33,13 @@ Aprire il file application.properties (path: src/main/resources/ ) e decommentar
    ```
 
 Riavviare il progetto Spring Boot.
+
+## Per chiudere WSL
+
+Per chiudere WSL, aprire un terminale PowerShell e lanciare il comando:
+
+   ```
+   wsl --shutdown
+   ```
+
+Verrà chiusa la sessione WSL corrente, compreso Docker e il database.
