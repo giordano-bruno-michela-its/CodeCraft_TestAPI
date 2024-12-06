@@ -8,9 +8,8 @@ import lombok.Setter;
 
 import java.sql.Date;
 
-//@NoArgsConstructor
-//@Getter
-//@Setter
+// Make abstract class Form with common properties and methods, then extend it with FormRichiesta and FormPrenotazione
+
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class FormRichiesta {
