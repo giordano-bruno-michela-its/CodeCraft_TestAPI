@@ -34,6 +34,11 @@ Aprire il file application.properties (path: src/main/resources/ ) e decommentar
 
 Riavviare il progetto Spring Boot.
 
+L'endpoint di test è http://localhost:8080/api/formreq/all
+
+Il riferimento è descritto nel file FormRichiestaController.java in src/main/java/com.codecraft.test_rest_api/controller/
+
+
 ## Per chiudere WSL
 
 Per chiudere WSL, aprire un terminale PowerShell e lanciare il comando:
