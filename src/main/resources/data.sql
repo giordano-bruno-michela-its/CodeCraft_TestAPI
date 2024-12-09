@@ -1,11 +1,11 @@
 -- src/main/resources/data.sql
 
 -- Insert fixed records for fascia_eta
-INSERT INTO fascia_eta (id, denominazione, descrizione) VALUES (1, '6-10 anni', 'Da 6 a 10 anni')
+INSERT INTO fascia_eta (id, denominazione, descrizione, eta_min, eta_max) VALUES (1, '6-10 anni', 'Da 6 a 10 anni', 6, 10)
 ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), descrizione = VALUES(descrizione);
-INSERT INTO fascia_eta (id, denominazione, descrizione) VALUES (2, '11-15 anni', 'Da 11 a 15 anni')
+INSERT INTO fascia_eta (id, denominazione, descrizione, eta_min, eta_max) VALUES (2, '11-15 anni', 'Da 11 a 15 anni', 11, 15)
 ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), descrizione = VALUES(descrizione);
-INSERT INTO fascia_eta (id, denominazione, descrizione) VALUES (3, '16-20 anni', 'Da 16 a 20 anni')
+INSERT INTO fascia_eta (id, denominazione, descrizione, eta_min, eta_max) VALUES (3, '16-20 anni', 'Da 16 a 20 anni', 16, 20)
 ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), descrizione = VALUES(descrizione);
 
 -- Insert fixed records for tipo_attivita

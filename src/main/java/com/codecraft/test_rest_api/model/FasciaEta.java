@@ -11,6 +11,8 @@ public class FasciaEta {
     
     private String denominazione;
     private String descrizione;
+    private int etaMin;
+    private int etaMax;
 
     public FasciaEta() {
     }
@@ -37,5 +39,21 @@ public class FasciaEta {
 
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
+    }
+
+    public int getEtaMin() {
+        return etaMin;
+    }
+
+    public void setEtaMin(int etaMinima) {
+        this.etaMin = etaMinima;
+    }
+
+    public int getEtaMax() {
+        return etaMax;
+    }
+
+    public void setEtaMax(int etaMassima) {
+        this.etaMax = etaMassima;
     }
 }
