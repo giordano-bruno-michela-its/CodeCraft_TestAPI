@@ -11,10 +11,6 @@ public class TipoAttivita {
     
     private String denominazione;
 
-    @ManyToOne
-    @JoinColumn(name = "fascia_eta_id")
-    private FasciaEta fasciaEta;
-
     public TipoAttivita() {
     }
 
@@ -32,13 +28,5 @@ public class TipoAttivita {
 
     public void setDenominazione(String denominazione) {
         this.denominazione = denominazione;
-    }
-
-    public FasciaEta getFasciaEta() {
-        return fasciaEta;
-    }
-
-    public void setFasciaEta(FasciaEta fasciaEta) {
-        this.fasciaEta = fasciaEta;
     }
 }

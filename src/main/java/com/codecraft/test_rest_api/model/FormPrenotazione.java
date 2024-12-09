@@ -47,4 +47,28 @@ public class FormPrenotazione extends FormRichiesta {
     public void setNumPartecipanti(int numPartecipanti) {
         this.numPartecipanti = numPartecipanti;
     }
+
+    public int getNumInsegnanti() {
+        return numInsegnanti;
+    }
+
+    public void setNumInsegnanti(int numInsegnanti) {
+        this.numInsegnanti = numInsegnanti;
+    }
+
+    public FasciaEta getFasciaEta() {
+        return fasciaEta;
+    }
+
+    public void setFasciaEta(FasciaEta fasciaEta) {
+        this.fasciaEta = fasciaEta;
+    }
+
+    public TipoAttivita getTipoAttivita() {
+        return tipoAttivita;
+    }
+
+    public void setTipoAttivita(TipoAttivita tipoAttivita) {
+        this.tipoAttivita = tipoAttivita;
+    }
 }

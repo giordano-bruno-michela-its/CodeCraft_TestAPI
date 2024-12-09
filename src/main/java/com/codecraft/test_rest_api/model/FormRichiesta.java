@@ -88,4 +88,12 @@ public class FormRichiesta {
     public void setTipoRichiesta(TipoRichiesta tipoRichiesta) {
         this.tipoRichiesta = tipoRichiesta;
     }
+
+    public String getEnte() {
+        return ente;
+    }
+
+    public void setEnte(String ente) {
+        this.ente = ente;
+    }
 }

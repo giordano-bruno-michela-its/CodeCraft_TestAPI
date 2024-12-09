@@ -9,22 +9,27 @@ INSERT INTO fascia_eta (id, denominazione, descrizione) VALUES (3, '16-20 anni',
 ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), descrizione = VALUES(descrizione);
 
 -- Insert fixed records for tipo_attivita
-INSERT INTO tipo_attivita (id, denominazione, fascia_eta_id) VALUES (1, 'Salto nel buio', 1)
-ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), fascia_eta_id = VALUES(fascia_eta_id);
-INSERT INTO tipo_attivita (id, denominazione, fascia_eta_id) VALUES (2, 'Tiro della cinghia', 2)
-ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), fascia_eta_id = VALUES(fascia_eta_id);
-INSERT INTO tipo_attivita (id, denominazione, fascia_eta_id) VALUES (3, 'Arrampicata sui vetri', 3)
-ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione), fascia_eta_id = VALUES(fascia_eta_id);
+INSERT INTO tipo_attivita (id, denominazione) VALUES (1, 'Salto nel buio')
+ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione);
+INSERT INTO tipo_attivita (id, denominazione) VALUES (2, 'Tiro della cinghia')
+ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione);
+INSERT INTO tipo_attivita (id, denominazione) VALUES (3, 'Arrampicata sui vetri')
+ON DUPLICATE KEY UPDATE denominazione = VALUES(denominazione);
 
 -- Insert sample data for form_richiesta
-INSERT INTO form_richiesta (id, email, nome, cognome, telefono, data_contatto, descrizione, tipo_richiesta, fascia_eta_id, tipo_attivita_id)
-VALUES (1, 'sample1@example.com', 'John', 'Doe', '1234567890', '2023-01-01', 'Sample description 1', 'RICHIESTA_INFORMAZIONI', 1, 1)
-ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta), fascia_eta_id = VALUES(fascia_eta_id), tipo_attivita_id = VALUES(tipo_attivita_id);
+INSERT INTO form_richiesta (id, email, nome, cognome, ente, telefono, data_contatto, descrizione, tipo_richiesta)
+VALUES (1, 'john.doe@example.com', 'John', 'Doe', 'Ente 1', '1234567890', '2023-01-01', 'Descrizione di esempio 1', 'RICHIESTA_INFORMAZIONI')
+ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), ente = VALUES(ente), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta);
 
-INSERT INTO form_richiesta (id, email, nome, cognome, telefono, data_contatto, descrizione, tipo_richiesta, fascia_eta_id, tipo_attivita_id)
-VALUES (2, 'sample2@example.com', 'Jane', 'Smith', '0987654321', '2023-02-01', 'Sample description 2', 'RICHIESTA_PRENOTAZIONE', 2, 2)
-ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta), fascia_eta_id = VALUES(fascia_eta_id), tipo_attivita_id = VALUES(tipo_attivita_id);
+INSERT INTO form_richiesta (id, email, nome, cognome, ente, telefono, data_contatto, descrizione, tipo_richiesta)
+VALUES (2, 'jane.smith@example.com', 'Jane', 'Smith', 'Ente 2', '0987654321', '2023-02-01', 'Descrizione di esempio 2', 'RICHIESTA_INFORMAZIONI')
+ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), ente = VALUES(ente), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta);
 
-INSERT INTO form_richiesta (id, email, nome, cognome, telefono, data_contatto, descrizione, tipo_richiesta, fascia_eta_id, tipo_attivita_id)
-VALUES (3, 'sample3@example.com', 'Alice', 'Johnson', '1122334455', '2023-03-01', 'Sample description 3', 'RICHIESTA_INFORMAZIONI', 3, 3)
-ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta), fascia_eta_id = VALUES(fascia_eta_id), tipo_attivita_id = VALUES(tipo_attivita_id);
+-- Insert sample data for form_prenotazione
+INSERT INTO form_richiesta (id, email, nome, cognome, ente, telefono, data_contatto, descrizione, tipo_richiesta)
+VALUES (3, 'alice.johnson@example.com', 'Alice', 'Johnson', 'Ente 3', '1122334455', '2023-03-01', 'Descrizione di esempio 3', 'RICHIESTA_PRENOTAZIONE')
+ON DUPLICATE KEY UPDATE email = VALUES(email), nome = VALUES(nome), cognome = VALUES(cognome), ente = VALUES(ente), telefono = VALUES(telefono), data_contatto = VALUES(data_contatto), descrizione = VALUES(descrizione), tipo_richiesta = VALUES(tipo_richiesta);
+
+INSERT INTO form_prenotazione (id, fascia_eta_id, tipo_attivita_id, data_inizio, data_fine, num_partecipanti, num_insegnanti)
+VALUES (3, 2, 2, '2023-03-10', '2023-03-15', 15, 3)
+ON DUPLICATE KEY UPDATE fascia_eta_id = VALUES(fascia_eta_id), tipo_attivita_id = VALUES(tipo_attivita_id), data_inizio = VALUES(data_inizio), data_fine = VALUES(data_fine), num_partecipanti = VALUES(num_partecipanti), num_insegnanti = VALUES(num_insegnanti);
