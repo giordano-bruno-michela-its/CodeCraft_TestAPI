@@ -69,6 +69,8 @@ L'endpoint di test è http://localhost:8080/api/formreq/all
 
 Il riferimento è descritto nel file FormRichiestaController.java in src/main/java/com.codecraft.test_rest_api/controller/
 
+Aggiunto anche Swagger per poter testare i servizi REST: http://localhost:8080/swagger-ui/index.html
+Da Swagger ricordarsi di correggere i body delle richieste POST, in quanto mette di default id = 0 e altri dati da non specificare.
 
 ## Per chiudere WSL
 
