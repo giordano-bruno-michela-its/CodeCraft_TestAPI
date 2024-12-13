@@ -14,6 +14,12 @@ Per installare Docker su WSL seguire la guida ufficiale di Docker:
 
 ## Docker Compose
 
+Avviare il servizio Docker da terminale WSL:
+
+   ```
+   sudo service docker start
+   ```
+
 Aprire un terminale WSL nella cartella root del progetto (dove c'è il file `docker-compose.yml`) e lanciare il comando:
 
    ```
